@@ -13,6 +13,7 @@
 a,
 button,
 input {
+    color: unset;
     transition: opacity .3s;
 }
 
@@ -218,6 +219,7 @@ h4 {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+    --webkit-appearance: none;
     border-radius: 0px 100px 100px 0px;
 }
 
