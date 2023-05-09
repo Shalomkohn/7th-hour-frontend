@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.hidden {
+    display: none !important;
+}
+
+a,
+button,
+input {
+    transition: opacity .3s;
+}
+
+a:hover,
+button:hover,
+input[type="submit"]:hover {
+    opacity: .8;
+}
+
+.main-container {
+    background: rgb(244, 238, 224);
+    background: linear-gradient(180deg, rgba(244, 238, 224, 0.1) 0%, rgba(244, 238, 224, 1) 30%);
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    min-height: calc(100vh - 274px);
+    position: relative;
+}
+
+.content {
+    padding: 70px 0 70px 100px;
+}
+
+.bh {
+    margin-bottom: 96px;
+}
+
+h1 {
+    font-family: 'Bitter', serif;
+    font-weight: normal;
+    font-size: 45px;
+    max-width: 683px;
+    margin-bottom: 64px;
+    color: #333;
+}
+
+.sub-heading {
+    margin-bottom: 64px;
+    font-size: 16px;
+    max-width: 697px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 64px;
+}
+
+
+.input-location-bar {
+    width: 430px;
+    height: 40px;
+    border-radius: 100px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.location-input {
+    width: 100%;
+    background: none;
+    border: none;
+    height: 100%;
+    padding: 0 0 0 24px;
+    font-size: 16px;
+    border-radius: 100px 0 0 100px;
+}
+
+.location-input-btn {
+    width: 120px;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Bitter', serif;
+    font-weight: medium;
+    border: none;
+    background-color: #6D5D6E;
+    color: #fff;
+    cursor: pointer;
+}
+
+.get-location-btn {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #fff;
+    background-color: #6D5D6E;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: 'Bitter', serif;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.hero-img-wrapper {
+    width: 30%;
+    background-image: url(images/kiddush-cup-skinny.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.kiddush-cup-square {
+    display: none;
+}
+
+/* Results */
+
+.results-section {
+    margin: 115px 0 38px;
+}
+
+.results-box {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #999;
+    border-radius: 100px;
+    gap: 1px;
+    margin-bottom: 74px;
+}
+
+.location,
+.time {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+h4 {
+    font-family: 'Bitter', serif;
+    font-size: 22px;
+    color: #6D5D6E;
+    margin-bottom: 30px;
+}
+
+.location {
+    border-right: 1px solid #999;
+}
+
+.results-location-span,
+.results-time-span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.email-me-results {
+    margin: auto;
+    width: 179px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: underline;
+    border: none;
+    background: none;
+    margin-bottom: 16px;
+}
+
+.input-email-bar {
+    width: 430px;
+    height: 40px;
+    border-radius: 100px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+    margin-inline: auto;
+}
+
+.email-input {
+    width: 100%;
+    background: none;
+    border: none;
+    height: 100%;
+    padding: 0 0 0 24px;
+    font-size: 16px;
+    border-radius: 100px 0 0 100px;
+}
+
+.email-input-btn {
+    width: 120px;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Bitter', serif;
+    font-weight: medium;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+h2 {
+    margin-top: 115px;
+    color: #333;
+    font-size: 22px;
+    font-family: 'Bitter', serif;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #6D5D6E;
+    color: #fff;
+    padding: 50px 100px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer h3 {
+    font-size: 18px;
+    font-family: 'Bitter', serif;
+    font-weight: medium;
+    margin-bottom: 19px;
+}
+
+footer p {
+    margin-bottom: 19px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 47px;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.change-language {
+    display: flex;
+    align-items: end;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    gap: 19px;
+}
+
+.change-language.small-screen {
+    display: none;
+}
+
+@media (max-width: 1075px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .results-box {
+        width: 550px;
+        height: 120px;
+    }
+
+    .results-location-span,
+    .results-time-span {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 430px;
+        gap: 31px;
+    }
+
+    .get-location-btn {
+        width: 100%;
+    }
+
+    .hero-img-wrapper {
+        width: 40%;
+    }
+}
+
+/* Tablet veiw */
+@media (max-width: 920px) {
+    .main-container {
+        background: rgb(244, 238, 224);
+        background: linear-gradient(214deg, rgba(244, 238, 224, 0) 0%, rgba(244, 238, 224, 1) 45%);
+    }
+
+    .content {
+        padding: 70px 100px;
+    }
+
+    .hero-img-wrapper {
+        background-image: url(images/kiddush-cup-square.jpeg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .results-box {
+        width: 100%;
+    }
+
+    .actions {
+        width: 100%;
+    }
+
+    .input-location-bar {
+        width: 100%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 50px;
+        position: relative;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .change-language.small-screen {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .change-language.big-screen {
+        display: none;
+    }
+}
+
+@media (max-width: 670px) {
+    .content {
+        padding: 38px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .sub-heading {
+        font-size: 16px;
+    }
+
+    .results-box {
+        border: none;
+    }
+
+    .input-email-bar {
+        width: 100%;
+    }
+
+    .location-input-btn {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+        padding: 38px;
+    }
+
+    .change-language.small-screen {
+        position: static;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 430px) {
+    h1 {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .sub-heading {
+        font-size: 14px;
+    }
+
+    .results-section {
+        margin: 65px 0 38px;
+    }
+
+    .actions {
+        gap: 15px;
+    }
+
+    .location-input::placeholder {
+        font-size: 14px;
+    }
+}
