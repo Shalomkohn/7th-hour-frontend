@@ -97,8 +97,8 @@ h1 {
     background-color: #6D5D6E;
     color: #fff;
     cursor: pointer;
-    --webkit-appearance: none;
-    --webkit-border-radius: 0px 100px 100px 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px 100px 100px 0px;
     border-radius: 0px 100px 100px 0px;
 }
 
@@ -221,8 +221,8 @@ h4 {
     background-color: #333;
     color: #fff;
     cursor: pointer;
-    --webkit-appearance: none;
-    --webkit-border-radius: 0px 100px 100px 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px 100px 100px 0px;
     border-radius: 0px 100px 100px 0px;
 }
 
