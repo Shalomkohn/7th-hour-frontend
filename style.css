@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
-.hidden {
-    display: none !important;
-}
-
 a,
 button,
 input {
@@ -119,6 +113,10 @@ h1 {
     cursor: pointer;
 }
 
+.get-location-error {
+    color: red;
+}
+
 .hero-img-wrapper {
     width: 30%;
     background-image: url(images/kiddush-cup-skinny.jpeg);
@@ -145,6 +143,11 @@ h1 {
     border-radius: 100px;
     gap: 1px;
     margin-bottom: 74px;
+}
+
+.daylight-saving-time {
+    margin-top: 10px;
+    font-size: 13px;
 }
 
 .location,
@@ -224,6 +227,23 @@ h4 {
     -webkit-appearance: none;
     -webkit-border-radius: 0px 100px 100px 0px;
     border-radius: 0px 100px 100px 0px;
+}
+
+.email-delivery-status {
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #fcfc86;
+    color: #333;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
 }
 
 

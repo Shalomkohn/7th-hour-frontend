@@ -11,46 +11,55 @@
     <title>7thhour.info</title>
 </head>
 <body>
+    <div id="app">
     <main>
         <div class="main-container">
             <div class="content">
                 <div class="bh">B"H</div>
                 <h1>Check the exact time of the 7th hour in your area</h1>
                 <p class="sub-heading">The 7th hour is the time on Friday evening when it is preferable to refrain from making kiddush (Shulchan Aruch Alter Rebbe 271:3)</p>
-                <!-- Add "hidden" class to hide results section -->
-                <section class="results-section">
+                <section v-show="showResults" class="results-section">
                     <div class="results-box">
                         <div class="location">
                             <h4>Location</h4>
-                            <span class="results-location-span"> Far Rockaway, NY 11691, USA</span>
+                            <span class="results-location-span">{{locationResults}}</span>
                         </div>
                         <div class="time">
                             <h4>7th Hour</h4>
-                            <span class="results-time-span">6:55:02 - 7:55:02 PM</span>
+                            <span class="results-time-span">{{timeResults}}</span>
+                            <i class="daylight-saving-time" v-show="dstActive">Result includes DST</i>
                         </div>
                     </div>
-                    <button class="email-me-results">
+                    <button @click="openEmailForm()" class="email-me-results">
                         <img src="images/mail.svg" alt="">
                         <span>Send me my results</span>
                     </button>
-                    <!-- Add "hidden" class to hide form -->
-                    <form class="input-email-bar">
-                        <input type="text" class="email-input" placeholder="Email address">
-                        <input type="submit" class="email-input-btn" value="Send">
-                    </form>
+                    <div v-show="showEmailForm">
+                        <form @submit="submitEmailForm" class="input-email-bar">
+                            <input v-model="emailInput" type="email" class="email-input" placeholder="Email address">
+                            <input type="submit" class="email-input-btn" value="Send">
+                        </form>
+                        <div v-show="showEmailDeliveryStatus" class="email-delivery-status">
+                            <h5 v-show="emailSentSuccess">Results successfully sent to {{email}}</h5>
+                            <h5 v-show="!emailSentSuccess">Failed to send results to {{email}}</h5>
+                        </div>
+                    </div>
+
+
                     <h2>Try another location</h2>
                 </section>
-                <form class="actions">
-                    <div class="input-location-bar">
-                        <input type="text" class="location-input" placeholder="Enter an Address, City or Post/Zip code">
+                <div @submit="submitLocationInput" class="actions">
+                    <form class="input-location-bar">
+                        <input type="text" class="location-input" placeholder="Enter an Address, City or Post/Zip code" v-model="locationInput">
                         <input type="submit" class="location-input-btn">
-                    </div>
+                    </form>
                     <span>Or</span>
-                    <button class="get-location-btn">
+                    <button @click="getLocation" class="get-location-btn">
                         <span>My Location</span>
                         <img src="images/location.svg" alt="">
                     </button>
-                </form>
+                </div>
+                <p class="get-location-error"></p>
             </div>
             <div class="hero-img-wrapper">
             </div>
@@ -83,5 +92,8 @@
             <div class="powered-by">Powered by <a target="_blank" href="https://cybercliff.com">CyberCliff</a></div>
         </div>
     </footer>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
